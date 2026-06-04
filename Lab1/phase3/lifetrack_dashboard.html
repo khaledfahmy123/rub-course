@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LifeTrack Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080810;
+      --surface: #0f0f1a;
+      --border: #1e1e30;
+      --text: #e2e2f0;
+      --muted: #5a5a7a;
+      --accent: #6366f1;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      padding: 3rem 2rem;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #6366f1 0%, #f59e0b 50%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+
+    .stats {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.8rem;
+      min-width: 140px;
+    }
+
+    .stat-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-value {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .stat-count {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    thead tr {
+      background: var(--border);
+    }
+
+    th {
+      padding: 0.9rem 1.2rem;
+      text-align: left;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    td {
+      padding: 0.85rem 1.2rem;
+      color: var(--text);
+      border-top: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    tr:hover td { background: rgba(99,102,241,0.05); }
+
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 3rem;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LifeTrack</h1>
+    <p>Last updated 2026-06-04 22:00:11 · 1 event total</p>
+  </header>
+
+  <div class="stats">
+    <div class='stat'>
+        <div class='stat-label' style='color:#10b981'>EXERCISE</div>
+        <div class='stat-value'>140 min</div>
+        <div class='stat-count'>1 session</div>
+      </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th style="text-align:center">Min</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>2026-06-04 22:00</td>
+        <td><span style='background:#10b981;color:#0a0a0a;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700;letter-spacing:0.08em'>EXERCISE</span></td>
+        <td>doing excessive exercises today</td>
+        <td style='text-align:center'>140</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
